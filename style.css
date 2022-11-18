@@ -37,35 +37,32 @@ main {
   float:left;
 }
 
-.title {
-  position: relative;
-  width: auto;
+.title { 
   height: 860px;
-  top: 0px;
+  top: 32px;
   font-family: 'Nunito', sans-serif;
-  font-size: 32px;
-  float: left;
-  left: 800 / 2;
+  font-size: 32px; 
+  position: absolute; 
+  width:auto;
+  text-align:center;
 }
 
 .ruleslink {
   font-size: 18px;
   font-weight: 400;
-  color:aquamarine;
+  color:rgb(227, 167, 76);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: auto;
   height: auto;
-  left: 37px;
   position: relative;
 }
 
-.ruleslink {
+.win {
   font-size: 14px;  
-  color:#fff;
+  color:rgb(237, 237, 71);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: auto;
   height: auto;
-  left: 37px;
   position: relative;
 }
 
