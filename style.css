@@ -49,13 +49,26 @@ main {
 }
 
 .ruleslink {
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: 400;
+  color:aquamarine;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: auto;
   height: auto;
   left: 37px;
   position: relative;
 }
+
+.ruleslink {
+  font-size: 14px;  
+  color:#fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: auto;
+  height: auto;
+  left: 37px;
+  position: relative;
+}
+
 
 .player {
   flex: 50%;
