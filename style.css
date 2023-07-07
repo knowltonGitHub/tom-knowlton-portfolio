@@ -11,7 +11,7 @@
   font-weight: 400;
   color:rgb(227, 167, 76);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: -20px;
+  margin: -9px;
 }
 
 html {
@@ -63,6 +63,7 @@ main {
   width: auto;
   height: auto;
   position: relative;
+  margin: 10px;
 }
 
 .win {
@@ -72,6 +73,7 @@ main {
   width: auto;
   height: auto;
   position: relative;
+  margin: -9px;
 }
 
 
