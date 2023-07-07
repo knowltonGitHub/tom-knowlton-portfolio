@@ -9,9 +9,12 @@
 .skills {
   font-size: 12px;
   font-weight: 400;
-  color:rgb(227, 167, 76);
+  color: rgb(255, 255, 255);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 33px;
+  margin-left: 280px;
+  margin-right: 280px;
+  margin-top: 41px;
+  text-align: center;
 }
 
 html {
@@ -63,17 +66,17 @@ main {
   width: auto;
   height: auto;
   position: relative;
-  margin: -29px;
+  margin: 10px;
 }
 
 .win {
-  font-size: 15px;  
-  color:rgb(237, 237, 71);
+  font-size: 15px;
+  color: rgb(237, 237, 71);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: auto;
   height: auto;
   position: relative;
-  margin: 32px;
+  margin: -4px;
 }
 
 
