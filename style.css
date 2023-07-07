@@ -210,3 +210,7 @@ main {
 .hidden{
   display:none;
 }
+
+h1 {
+  margin: -37px;
+}
