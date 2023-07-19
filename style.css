@@ -7,14 +7,34 @@
 }
 
 .skills {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   color: rgb(255, 255, 255);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-left: 280px;
-  margin-right: 280px;
-  margin-top: 41px;
+  margin-top: 56px;
+  width: 500px;
   text-align: center;
+}
+
+.ruleslink {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(227, 167, 76);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: auto;
+  height: auto;
+  position: relative;
+  margin: 22px;
+}
+
+.win {
+  font-size: 15px;
+  color: rgb(237, 237, 71);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: auto;
+  height: auto;
+  position: relative;
+  margin: 10px;
 }
 
 html {
@@ -31,6 +51,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+h1 {
+  margin: -26px;
+  color: #d19999;
 }
 
 /* LAYOUT */
@@ -58,26 +83,7 @@ main {
   text-align:center;
 }
 
-.ruleslink {
-  font-size: 18px;
-  font-weight: 400;
-  color:rgb(227, 167, 76);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  width: auto;
-  height: auto;
-  position: relative;
-  margin: 10px;
-}
 
-.win {
-  font-size: 15px;
-  color: rgb(237, 237, 71);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  width: auto;
-  height: auto;
-  position: relative;
-  margin: -4px;
-}
 
 
 .player {
@@ -212,8 +218,4 @@ main {
 
 .hidden{
   display:none;
-}
-
-h1 {
-  margin: -37px;
 }
