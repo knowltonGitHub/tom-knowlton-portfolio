@@ -70,7 +70,8 @@ main {
   border-radius: 9px;
   overflow: hidden;
   display: flex;
-  float:left;
+  float: left;
+  margin-top: 223px;
 }
 
 .title { 
