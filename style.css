@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
-.resfile{
-  position:relative;
-  top:20px;
-  left:600px;
-  font-size:24px;
-  font-weight: bold;
-  font-color: white;
+.resfile {
+  height: 35px;
+  width: 254px;
+  position: fixed;
+  top: 873px;
+  left: 844px;
+  font-size: 24px;
+  font-weight: bold; 
+  background-color: #777777;
+  color: white !important;
+}
+
+.resfile a {
+  color: white;
+  margin: 10px;
 }
 
 * {
