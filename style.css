@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
+.resfile{
+  top:600px;
+  left:600px;
+}
+}
 * {
   margin: 0;
   padding: 0;
