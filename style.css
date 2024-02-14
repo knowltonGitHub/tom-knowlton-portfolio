@@ -16,6 +16,23 @@
   margin: 22px;
 }
 
+.coverfile {
+  height: 35px;
+  width: 281px;
+  position: fixed;
+  top: 873px;
+  left: 1000px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #777777; 
+}
+
+.coverfile a {
+  color: rgb(194, 179, 179);
+  margin: 22px;
+}
+
+
 * {
   margin: 0;
   padding: 0;
