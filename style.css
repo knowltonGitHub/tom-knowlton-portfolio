@@ -15,10 +15,10 @@
 
 .piggame {
   height: 35px;
-  width: 231px;
+  width: 255px;
   position: relative;
-  top: -163px;
-  left: 538px;
+  top: -98px;
+  left: 88px;
   font-size: 24px;
   font-weight: bold;
   background-color: #777777;
@@ -39,10 +39,10 @@
 
 .resfile {
   height: 35px;
-  width: 231px;
+  width: 255px;
   position: relative;
-  top: -163px;
-  left: 538px;
+  top: -102px;
+  left: 88px;
   font-size: 24px;
   font-weight: bold;
   background-color: #777777;
@@ -62,10 +62,10 @@
 
 .coverfile {
   height: 35px;
-  width: 231px;
+  width: 255px;
   position: relative;
-  top: -154px;
-  left: 538px;
+  top: -93px;
+  left: 88px;
   font-size: 24px;
   font-weight: bold;
   background-color: #777777;
