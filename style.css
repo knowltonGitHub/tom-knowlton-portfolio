@@ -137,7 +137,12 @@ body {
   justify-content: center;
 }
 
-h1, h2 {
+h1 {
+  margin: -26px;
+  color: #d19999;
+}
+
+.piggame h2 {
   margin: -26px;
   color: #d19999;
 }
