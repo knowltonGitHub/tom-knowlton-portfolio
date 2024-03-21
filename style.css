@@ -13,6 +13,30 @@
 
 }
 
+.piggame {
+  height: 35px;
+  width: 231px;
+  position: relative;
+  top: -163px;
+  left: 538px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #777777;
+}
+
+.piggame a {
+  color: rgb(194, 179, 179);
+  margin: 22px;
+  text-decoration:none;
+  font-size:16px;
+}
+
+.piggame a:hover {
+  color: rgb(255, 255, 255); 
+  font-size:18px;
+}
+
+
 .resfile {
   height: 35px;
   width: 231px;
