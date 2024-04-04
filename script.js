@@ -49,29 +49,32 @@ const switchPlayer = function () {
 
 resetGame();
 
+
 btnRoll.addEventListener('click', function () {
   if (playing) {
     const dice = Math.trunc(Math.random() * 6) + 1;
     console.log(dice);
 
-    // Start dice animation
-    let currentDiceFace = 1;
-    const animationInterval = setInterval(() => {
-      diceEl.style.filter = 'blur(2px)'; // Add blur during animation
-      diceEl.src = `dice-${currentDiceFace++}.png`;
-      if (currentDiceFace > 6) {
-        currentDiceFace = 1;
-      }
-    }, 100); // Change image every 100 milliseconds (adjust as needed)
+    // Start dice animation with GreenSock
+    const diceAnimation = gsap.timeline({ repeat: -1 }); // Repeat animation indefinitely
+    diceAnimation
+      .to(diceEl, { // Animate dice element
+        duration: 0.5,
+        ease: 'power3.inOut', // Adjust easing for desired roll effect
+        rotation: 360, // Rotate the dice
+        filter: 'blur(2px)', // Add blur during animation
+      })
+      .to(diceEl, { // Update dice image after animation
+        duration: 0.1,
+        filter: 'none', // Remove blur
+        src: `dice-${dice}.png`, // Set final dice face
+      });
 
-    // Stop animation after a short duration and display final face
+    // Stop animation after a short duration and show the dice
     setTimeout(() => {
-      clearInterval(animationInterval);
-      diceEl.style.filter = 'none'; // Remove blur after animation
-      diceEl.src = `dice-${dice}.png`; // Set final dice face
+      diceAnimation.pause(); // Pause the repeating animation
+      diceEl.classList.remove('hidden');
 
-      diceEl.classList.remove('hidden'); // Show the dice
-      
       // Check for rolled 1 and switch player if needed
       if (dice !== 1) {
         currentScore += dice;
@@ -79,9 +82,44 @@ btnRoll.addEventListener('click', function () {
       } else {
         switchPlayer();
       }
-    }, 1500); // Stop animation after 1.5 seconds (adjust as needed)
+    }, 1500); // Adjust delay as needed
   }
 });
+
+
+// btnRoll.addEventListener('click', function () {
+//   if (playing) {
+//     const dice = Math.trunc(Math.random() * 6) + 1;
+//     console.log(dice);
+
+//     // Start dice animation
+//     let currentDiceFace = 1;
+//     const animationInterval = setInterval(() => {
+//       diceEl.style.filter = 'blur(2px)'; // Add blur during animation
+//       diceEl.src = `dice-${currentDiceFace++}.png`;
+//       if (currentDiceFace > 6) {
+//         currentDiceFace = 1;
+//       }
+//     }, 100); // Change image every 100 milliseconds (adjust as needed)
+
+//     // Stop animation after a short duration and display final face
+//     setTimeout(() => {
+//       clearInterval(animationInterval);
+//       diceEl.style.filter = 'none'; // Remove blur after animation
+//       diceEl.src = `dice-${dice}.png`; // Set final dice face
+
+//       diceEl.classList.remove('hidden'); // Show the dice
+      
+//       // Check for rolled 1 and switch player if needed
+//       if (dice !== 1) {
+//         currentScore += dice;
+//         document.getElementById(`current--${activePlayer}`).textContent = currentScore;
+//       } else {
+//         switchPlayer();
+//       }
+//     }, 1500); // Stop animation after 1.5 seconds (adjust as needed)
+//   }
+// });
 
 //Roll dice functionality
 // btnRoll.addEventListener('click', function () {
