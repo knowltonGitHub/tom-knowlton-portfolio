@@ -49,12 +49,13 @@ const switchPlayer = function () {
 
 resetGame();
 
+console.log("gsap outside of event:" + gsap);
 
 btnRoll.addEventListener('click', function () {
   if (playing) {
     const dice = Math.trunc(Math.random() * 6) + 1;
     console.log(dice);
-
+console.log("gsap inside fo btnroll click event:" + gsap);
     // Start dice animation with GreenSock
     const diceAnimation = gsap.timeline({ repeat: -1 }); // Repeat animation indefinitely
     diceAnimation
