@@ -49,27 +49,60 @@ const switchPlayer = function () {
 
 resetGame();
 
-//Roll dice functionality
 btnRoll.addEventListener('click', function () {
-  //generate random dice roll
   if (playing) {
     const dice = Math.trunc(Math.random() * 6) + 1;
     console.log(dice);
-    //display dice
-    diceEl.classList.remove('hidden');
-    diceEl.src = `dice-${dice}.png`;
-    //check for rolled 1, if true switch to next player
-    if (dice !== 1) {
-      //add dice value to currentScore
-      currentScore += dice;
-      document.getElementById(`current--${activePlayer}`).textContent =
-        currentScore;
-    } else {
-      //switch to next player
-      switchPlayer();
-    }
+
+    // Start dice animation
+    let currentDiceFace = 1;
+    const animationInterval = setInterval(() => {
+      diceEl.src = `dice-${currentDiceFace++}.png`;
+      if (currentDiceFace > 6) {
+        currentDiceFace = 1;
+      }
+    }, 50); // Change image every 50 milliseconds
+
+    // Stop animation after a short duration and display final face
+    setTimeout(() => {
+      clearInterval(animationInterval);
+      diceEl.src = `dice-${dice}.png`; // Set final dice face
+
+      diceEl.classList.remove('hidden'); // Show the dice
+      
+      // Check for rolled 1 and switch player if needed
+      if (dice !== 1) {
+        currentScore += dice;
+        document.getElementById(`current--${activePlayer}`).textContent = currentScore;
+      } else {
+        switchPlayer();
+      }
+    }, 1500); // Stop animation after 1.5 seconds
   }
 });
+
+
+//Roll dice functionality
+// btnRoll.addEventListener('click', function () {
+//   //generate random dice roll
+//   if (playing) {
+//     const dice = Math.trunc(Math.random() * 6) + 1;
+//     console.log(dice);
+//     //display dice
+//     diceEl.classList.remove('hidden');
+//     diceEl.src = `dice-${dice}.png`;
+//     //check for rolled 1, if true switch to next player
+//     if (dice !== 1) {
+//       //add dice value to currentScore
+//       currentScore += dice;
+//       document.getElementById(`current--${activePlayer}`).textContent =
+//         currentScore;
+//     } else {
+//       //switch to next player
+//       switchPlayer();
+//     }
+//   }
+// });
 
 btnHold.addEventListener('click', function () {
   if (playing) {
