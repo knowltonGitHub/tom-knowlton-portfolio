@@ -82,7 +82,7 @@ btnRoll.addEventListener('click', function () {
       } else {
         switchPlayer();
       }
-    }, 1500); // Adjust delay as needed
+    }, 1000); // Adjust delay as needed
   }
 });
 
