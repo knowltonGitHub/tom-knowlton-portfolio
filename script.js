@@ -49,7 +49,10 @@ const switchPlayer = function () {
 
 resetGame();
 
+console.log("before gsap check");
+console.log(window.gsap)
 console.log("gsap outside of event:" + gsap);
+console.log("after gsap check");
 
 btnRoll.addEventListener('click', function () {
   if (playing) {
