@@ -57,15 +57,17 @@ btnRoll.addEventListener('click', function () {
     // Start dice animation
     let currentDiceFace = 1;
     const animationInterval = setInterval(() => {
+      diceEl.style.filter = 'blur(2px)'; // Add blur during animation
       diceEl.src = `dice-${currentDiceFace++}.png`;
       if (currentDiceFace > 6) {
         currentDiceFace = 1;
       }
-    }, 50); // Change image every 50 milliseconds
+    }, 100); // Change image every 100 milliseconds (adjust as needed)
 
     // Stop animation after a short duration and display final face
     setTimeout(() => {
       clearInterval(animationInterval);
+      diceEl.style.filter = 'none'; // Remove blur after animation
       diceEl.src = `dice-${dice}.png`; // Set final dice face
 
       diceEl.classList.remove('hidden'); // Show the dice
@@ -77,10 +79,9 @@ btnRoll.addEventListener('click', function () {
       } else {
         switchPlayer();
       }
-    }, 100); // Stop animation after 1.5 seconds
+    }, 1500); // Stop animation after 1.5 seconds (adjust as needed)
   }
 });
-
 
 //Roll dice functionality
 // btnRoll.addEventListener('click', function () {
