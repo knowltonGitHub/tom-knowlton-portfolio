@@ -77,7 +77,7 @@ btnRoll.addEventListener('click', function () {
       } else {
         switchPlayer();
       }
-    }, 1500); // Stop animation after 1.5 seconds
+    }, 100); // Stop animation after 1.5 seconds
   }
 });
 
