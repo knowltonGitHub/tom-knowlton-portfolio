@@ -52,7 +52,6 @@
 }
 
 .ruleslink {
-  display: flex;
   font-size: 18px;
   font-weight: 400;
   color: rgb(227, 167, 76);
@@ -60,11 +59,9 @@
   width: auto;
   height: auto;
   position: relative;
-  margin-top: 22px;
-  justify-content: center;
-  margin-left: 250px;
-  margin-right: 430px;
+  margin: 9px;
 }
+
 
 .win {
   font-size: 15px;
