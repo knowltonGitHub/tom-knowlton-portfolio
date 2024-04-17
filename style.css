@@ -34,9 +34,9 @@
 
 .portfolio-item a {
   color: rgb(194, 179, 179);
-  margin: 0px;
-  text-decoration:none;
-  font-size:16px;
+  margin-top: 12px;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 .portfolio-item a:hover {
@@ -78,6 +78,7 @@ html {
 }
 
 body {
+  min-width: 1050px;
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
   height: 100vh;
