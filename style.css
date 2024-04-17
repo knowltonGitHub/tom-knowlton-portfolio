@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 .thebadges {
+  display: flex;
   position: relative;
-  top: 78px;
-  left: -26px;
   height: 200px;
   width: 506px;
   background-color: #0D0F12;
+  justify-content: center;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 .pluralsight {
