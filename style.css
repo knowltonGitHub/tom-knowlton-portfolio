@@ -42,16 +42,6 @@
   box-sizing: inherit;
 }
 
-.skills {
-  font-size: 14px;
-  font-weight: 400;
-  color: rgb(255, 255, 255);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-top: 56px;
-  width: 500px;
-  text-align: center;
-}
-
 .ruleslink {
   font-size: 18px;
   font-weight: 400;
@@ -89,9 +79,14 @@ body {
 }
 
 p.skills {
-  position: relative;
-  top: 0px;
-  left: 0px;
+  display: flex;
+  justify-content: center;   
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 56px;
+  width: 500px;  
 }
 
 h1 {
