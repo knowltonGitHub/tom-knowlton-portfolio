@@ -47,12 +47,12 @@ const switchPlayer = function () {
   player1El.classList.toggle('player--active');
 };
 
-resetGame();
+//resetGame();
 
-console.log("before gsap check");
-console.log(window.gsap)
-console.log("gsap outside of event:" + gsap);
-console.log("after gsap check");
+//console.log("before gsap check");
+//console.log(window.gsap)
+//console.log("gsap outside of event:" + gsap);
+//console.log("after gsap check");
 
 
 // Roll dice functionality
