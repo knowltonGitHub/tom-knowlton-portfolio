@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 .thebadges {
-    position: relative;
-    top: -35px;
-    left: -26px;
-    height: 200px;
-    width: 506px;
-    background-color: #0D0F12;
+  position: relative;
+  top: 78px;
+  left: -26px;
+  height: 200px;
+  width: 506px;
+  background-color: #0D0F12;
+}
+
+.pluralsight {
+  position: relative;
+  top: 50px;
 }
 
 .azure img {
