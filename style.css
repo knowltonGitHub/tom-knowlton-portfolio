@@ -106,8 +106,13 @@ h1 {
 }
 
 .pluralsight h2 {
+  margin-top: 50px;
+  display: flex;
   margin: -26px;
   color: #d19999;
+  justify-content: center;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 /* LAYOUT */
