@@ -109,10 +109,12 @@ p.gameskills {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-top: 20px;
   margin-left: 310px;
-  margin-right: 350px;
+  margin-right: -280px;
 }
 
 h1 {
+  margin-right: 30px;
+  margin-left: 340px;
   color: #d19999;
   display: flex;
   justify-content: center;
