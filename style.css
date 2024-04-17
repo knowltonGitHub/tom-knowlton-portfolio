@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 .thebadges {
-  position: relative;
-  top: -35px;
-  left: -26px;
-  height: 200px;
-  width: 506px;
-  background-color: #0D0F12;
+    position: relative;
+    top: -35px;
+    left: -26px;
+    height: 200px;
+    width: 506px;
+    background-color: #0D0F12;
 }
 
 .azure img {
@@ -179,14 +179,18 @@ body {
   font-weight: 400;
   height: 100vh;
   color: #333;
-  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
-  display: flex;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);  
   align-items: center;
   justify-content: center;
 }
 
+p.skills {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
 h1 {
-  margin: -26px;
+  margin: 0px;
   color: #d19999;
 }
 
