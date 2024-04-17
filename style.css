@@ -13,12 +13,9 @@
  margin-top: 20px;
 }
 
-.piggame {
-  height: 35px;
-  width: 300px;
-  position: relative;
-  top: -105px;
-  left: 88px;
+.portfolio-item {
+  display: flex;
+  justify-content: center;
   font-size: 24px;
   font-weight: bold;
   background-color: #777777;
