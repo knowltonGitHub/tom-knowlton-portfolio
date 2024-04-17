@@ -23,100 +23,17 @@
   margin-top: 20px;
 }
 
-.piggame a {
+.portfolio-item a {
   color: rgb(194, 179, 179);
   margin: 22px;
   text-decoration:none;
   font-size:16px;
 }
 
-.piggame a:hover {
+.portfolio-item a:hover {
   color: rgb(255, 255, 255); 
   font-size:18px;
 }
-
-.resfile {
-  height: 35px;
-  width: 300px;
-  position: relative;
-  top: -102px;
-  left: 88px;
-  font-size: 24px;
-  font-weight: bold;
-  background-color: #777777;
-}
-
-
-.otwfile {
-  height: 35px;
-  width: 300px;
-  position: relative;
-  top: -136px;
-  left: 88px;
-  font-size: 24px;
-  font-weight: bold;
-  background-color: #777777;
-}
-
-.otwfile a {
-  color: rgb(194, 179, 179);
-  margin: 22px;
-  text-decoration:none;
-  font-size:16px;
-}
-
-.otwfile a:hover {
-  color: rgb(255, 255, 255); 
-  font-size:18px;
-}
-
-
-.resfile {
-  height: 35px;
-  width: 300px;
-  position: relative;
-  top: -126px;
-  left: 88px;
-  font-size: 24px;
-  font-weight: bold;
-  background-color: #777777;
-}
-
-.resfile a {
-  color: rgb(194, 179, 179);
-  margin: 22px;
-  text-decoration:none;
-  font-size:16px;
-}
-
-.resfile a:hover {
-  color: rgb(255, 255, 255); 
-  font-size:18px;
-}
-
-.coverfile {
-  height: 35px;
-  width: 300px;
-  position: relative;
-  top: -116px;
-  left: 88px;
-  font-size: 24px;
-  font-weight: bold;
-  background-color: #777777;
-}
-
-.coverfile a {
-  color: rgb(194, 179, 179);
-  margin: 22px;
-  text-decoration:none;
-  font-size:16px;
-}
-
-.coverfile a:hover {
-  color: rgb(255, 255, 255); 
-  font-size:18px;
-}
-
 
 * {
   border-radius: 5px;
@@ -178,9 +95,7 @@ p.skills {
 }
 
 h1 {
-  position: relative;
   color: #d19999;
-  align-items: center;
   display: flex;
   justify-content: center;
 }
