@@ -134,7 +134,7 @@ h1 {
   justify-content: center;
 }
 
-main {
+main-wrapper {
   margin-left: 440px;
   width: 100rem;
   height: 60rem;
