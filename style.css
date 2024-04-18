@@ -146,9 +146,8 @@ main {
   overflow: hidden;
   display: flex;
   float: left;
-  margin-top: 333px;
+  margin-top: 278px;
 }
-
 .title { 
   height: 860px;
   top: 32px;
