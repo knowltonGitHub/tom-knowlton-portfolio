@@ -134,8 +134,8 @@ h1 {
   justify-content: center;
 }
 
-/* LAYOUT */
 main {
+  margin-left: 440px;
   width: 100rem;
   height: 60rem;
   background-color: rgba(255, 255, 255, 0.35);
