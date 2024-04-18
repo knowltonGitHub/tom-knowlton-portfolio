@@ -110,7 +110,7 @@ p.skills {
   margin-right: 350px;
 }
 
-p.gameskills {
+h6.gameskills {
   display: flex;
   justify-content: center;
   font-size: 14px;
