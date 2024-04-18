@@ -127,14 +127,10 @@ h1 {
   justify-content: center;
 }
 
-.pluralsight h2 {
-  margin-top: 50px;
+.pluralsight h2 {  
   display: flex;
-  margin: -26px;
   color: #d19999;
   justify-content: center;
-  margin-left: 200px;
-  margin-right: 200px;
 }
 
 /* LAYOUT */
