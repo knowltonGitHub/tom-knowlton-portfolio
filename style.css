@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 .main-wrapper {
+  justify-content: center;
+  display: grid;
+  position: relative;
+  left: 400px;
   width: 1050px;
 }
 
@@ -117,9 +121,7 @@ p.gameskills {
   margin-right: -280px;
 }
 
-h1 {
-  margin-right: 30px;
-  margin-left: 340px;
+h1 { 
   color: #d19999;
   display: flex;
   justify-content: center;
