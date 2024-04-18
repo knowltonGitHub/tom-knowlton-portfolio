@@ -19,11 +19,12 @@
   margin-left: 220px;
   margin-right: 200px;
 }
+
 .pluralsight {
+  right: 50px;
   position: relative;
   top: 50px;
 }
-
 .azure img {
  margin-top: 20px;
 }
