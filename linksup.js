@@ -7,7 +7,7 @@ $(document).ready(function() {
   
       // Make AJAX request to your server-side script (replace with your script URL)
       $.ajax({
-        url: '/fetch-content.php', // Replace with your server script URL
+        url: url, // Replace with your server script URL
         data: { targetUrl: url }, // Send the external URL to the server
         dataType: 'json', // Expect a JSON response
         success: function(data) {
