@@ -17,7 +17,7 @@ $(document).ready(function() {
             $('#myModal').modal('show'); // Show the modal
           } else {
             // Handle errors from the server (optional)
-            alert('An error occurred while fetching content.');
+            alert('An error occurred while fetching content.' + data + data.content);
           }
         }
       });
