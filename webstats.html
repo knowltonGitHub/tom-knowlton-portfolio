@@ -3,60 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Technology Comparison</title>
-  <link rel="stylesheet" href="webtech.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="linksup.js"></script>
+  <title>Modal with Server-side Rendering</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVNkSXQNLE1zIrqHviLL7EIoQXhdAuuHWgIrqlMoQctHkKlM7KEkUTTQsQzONvIy" crossorigin="anonymous">
 </head>
 <body>
-  <h1>Technology Comparison</h1>
-  <table style="margin: 0 auto;"> <thead>
+
+  <table>
+    <thead>
       <tr>
         <th>Technology</th>
-        <th>Public Release</th>
-        <th>Official Site</th>
+        <th>Link</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>HTML</td>
-        <td>1991</td>
-        <td><a href="https://www.w3.org/">W3C</a></td>
+        <td><a href="https://www.w3schools.com/html/" class="technology-link">Learn More</a></td>
       </tr>
-      <tr>
-        <td>CSS</td>
-        <td>1996</td>
-        <td><a class="technology-link" href="https://www.w3.org/Style/CSS/">W3C</a></td>
-      </tr>
-      <tr>
-        <td>JavaScript</td>
-        <td>1995</td>
-        <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN Web Docs</a></td>
-      </tr>
-      <tr>
-        <td>jQuery</td>
-        <td>2006</td>
-        <td><a href="https://jquery.com/">jQuery</a></td>
-      </tr>
-      <tr>
-        <td>C#</td>
-        <td>2002</td>
-        <td><a href="https://docs.microsoft.com/en-us/dotnet/csharp/">Microsoft Docs</a></td>
-      </tr>
-      <tr>
-        <td>MS SQL Server</td>
-        <td>1987</td>
-        <td><a href="https://docs.microsoft.com/en-us/sql/sql-server/">Microsoft Docs</a></td>
-      </tr>
-      <tr>
-        <td>LINQ</td>
-        <td>2007</td>
-        <td><a href="https://developer.microsoft.com/en-us/dotnet/standard/linq/">Microsoft Docs</a></td>
-      </tr>
-    </tbody>
+      </tbody>
   </table>
 
-<div id="myModal"><div id="modalContent"></div></div>
-<div>changed 66554</div>
-</body>
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Fetched Content</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div id="modalContent"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-mGkxnLkTdXAOSvifNQN5zCNlcj7SoYWlwYEXYlPmDysENIxHGMfIWbXBsq1dBz7eA" crossorigin="anonymous"></script>
+  <script src="script.js"></script> </body>
 </html>
