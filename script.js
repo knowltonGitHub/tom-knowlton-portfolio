@@ -117,6 +117,7 @@ $(document).ready(function() {
     $.ajax({
       url: url,
       success: function(data) {
+        alert(data);
         // Once data is fetched, update the modal content
         $('#modalContent').html(data);
         // Show the modal (replace with your modal show function)
