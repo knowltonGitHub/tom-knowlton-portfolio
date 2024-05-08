@@ -120,7 +120,7 @@ $(document).ready(function() {
       success: function(data) {
         if (data.success) {
           // Update the modal content with extracted data from the server
-          $('#modalContent').html(data.content);
+          $('#modalContent').html(data);
           $('#myModal').modal('show'); // Show the modal
         } else {
           // Handle errors from the server (optional)
