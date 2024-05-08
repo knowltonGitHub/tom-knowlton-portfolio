@@ -3,7 +3,7 @@ $(document).ready(function() {
     $('a.technology-link').click(function(e) {
       e.preventDefault(); // Prevent default link behavior (opening in new window)
       var url = $(this).attr('href'); // Get the URL from the link
-      alert(url);
+      //alert(url);
       // Use jQuery's AJAX to fetch content
       $.ajax({
         url: url,
