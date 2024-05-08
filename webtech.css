@@ -7,6 +7,7 @@ table {
     padding: 10px;
     text-align: left; /* Align text to the left */
     border: 1px solid #ddd; /* Add borders to cells */
+    font-size: 16px; /* Set font size to 16px */
   }
   
   th {
