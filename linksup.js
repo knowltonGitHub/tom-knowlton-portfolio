@@ -10,7 +10,7 @@ $(document).ready(function() {
       // Use jQuery's load() method to fetch and display content
       $('#content-area').load(url, function(response, status) {
         if (status === "error") {
-          $('#content-area').html('An error occurred while fetching content.');
+          $('#content-area').html('An error occurred while fetching content:  ' + url);
         }
       });
     });
