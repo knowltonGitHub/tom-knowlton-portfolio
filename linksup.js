@@ -1,24 +1,16 @@
 $(document).ready(function() {
-    // Trigger modal on link click
-    $('a.technology-link').click(function(e) {
-      e.preventDefault(); // Prevent default link behavior
+    $('.content-button').click(function(e) {
+      e.preventDefault(); // Prevent default button behavior
   
-      var url = $(this).attr('href'); // Get the URL from the link
+      var url = $(this).data('url'); // Get the URL from the button's data-url attribute
   
-      // Make AJAX request to your server-side script (replace with your script URL)
-      $.ajax({
-        url: url, // Replace with your server script URL
-        data: { targetUrl: url }, // Send the external URL to the server
-        dataType: 'json', // Expect a JSON response
-        success: function(data) {
-          if (data.success) {
-            // Update the modal content with extracted data from the server
-            $('#modalContent').html(data.content);
-            $('#myModal').modal('show'); // Show the modal
-          } else {
-            // Handle errors from the server (optional)
-            alert('An error occurred while fetching content.' + data + data.content);
-          }
+      // Clear any previous content
+      $('#content-area').html('');
+  
+      // Use jQuery's load() method to fetch and display content
+      $('#content-area').load(url, function(response, status) {
+        if (status === "error") {
+          $('#content-area').html('An error occurred while fetching content.');
         }
       });
     });
