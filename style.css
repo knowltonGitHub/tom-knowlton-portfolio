@@ -122,7 +122,9 @@ h6.gameskills {
   margin-right: -280px;
 }
 
-h1 { 
+h1 {
+  margin-right: 105px;
+  margin-left: 38px;
   color: #d19999;
   display: flex;
   justify-content: center;
