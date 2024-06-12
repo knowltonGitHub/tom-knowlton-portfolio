@@ -29,6 +29,10 @@
  margin-top: 20px;
 }
 
+.udemy img {
+  margin-top: 20px;
+ }
+
 .portfolio-item {
   display: flex;
   justify-content: center;
