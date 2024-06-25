@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 .main-wrapper {
-  justify-content: center;
+  margin: 0 auto;
+  /* justify-content: center;
   display: grid;
   position: relative;
   left: 400px;
-  width: 1050px;
+  width: 1050px; */
 }
 
 .thebadges {
