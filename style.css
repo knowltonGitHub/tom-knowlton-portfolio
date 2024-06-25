@@ -38,6 +38,18 @@
   top: 50px;
 }
 
+.psubheader {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 20px;
+  margin-left: 310px;
+  margin-right: 350px;
+}
+
 .udemy {
   right: 50px;
   position: relative;
