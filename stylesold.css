@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+.main-wrapper {
+  justify-content: center;
+  display: grid;
+  position: relative;
+  left: 400px;
+  width: 1050px;
+}
+
+.thebadges {
+  margin-top: 70px;
+  display: flex;
+  position: relative;
+  height: 200px;
+  width: 506px;
+  background-color: #0D0F12;
+  justify-content: center;
+  margin-left: 220px;
+  margin-right: 200px;
+}
+
+.udemybadges {
+  margin-top: 70px;
+  display: flex;
+  position: relative;
+  height: 200px;
+  width: 506px;
+  justify-content: center;
+  margin-left: 620px;
+  margin-right: 200px;
+}
+
+.pluralsight {
+  right: 50px;
+  position: relative;
+  top: 50px;
+}
+
+.udemy {
+  right: 50px;
+  position: relative;
+  top: 50px;
+}
+
+.azure img {
+ margin-top: 20px;
+}
+
+.udemy-first {
+  margin-left: -117px;
+  margin-top: -49px;
+}
+
+.udemy-second {
+  margin-right: -200px;
+  margin-top: -180px;
+}
+
+.portfolio-item {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #777777; 
+  margin-top: 10px;
+  height: 50px;
+  margin-left: 350px;
+  margin-right: 430px;
+}
+
+.portfolio-item a {
+  color: rgb(194, 179, 179);
+  margin-top: 12px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.portfolio-item a:hover {
+  color: rgb(255, 255, 255); 
+  font-size:18px;
+}
+
+* {
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 1050px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #333;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);  
+  align-items: center;
+  justify-content: center;
+}
+
+p.skills {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 20px;
+  margin-left: 310px;
+  margin-right: 350px;
+}
+
+h6.gameskills {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 20px;
+  margin-left: 310px;
+  margin-right: -280px;
+}
+
+h1 {
+  margin-right: 105px;
+  margin-left: 21px;
+  color: #d19999;
+  display: flex;
+  justify-content: center;
+}
+
+.pluralsight h2 {  
+  display: flex;
+  color: #d19999;
+  justify-content: center;
+}
+
+.udemy h2 {
+  margin-left: 800px;
+  left: 200px;
+  width: 200px;
+  display: flex;
+  color: #d19999;
+  justify-content: center;
+}
+
+.hidden{
+  display:none;
+}
