@@ -49,13 +49,14 @@
 }
 
 .udemy-first {
+  margin-left: -117px;
   margin-top: -49px;
 }
 
 .udemy-second {
-  margin-top: -49px;
+  margin-right: -200px;
+  margin-top: -180px;
 }
-
 
 .portfolio-item {
   display: flex;
@@ -142,7 +143,10 @@ h1 {
   justify-content: center;
 }
 
-.udemy h2 {  
+.udemy h2 {
+  margin-left: 800px;
+  left: 200px;
+  width: 200px;
   display: flex;
   color: #d19999;
   justify-content: center;
