@@ -72,6 +72,7 @@ portfolio-item.clickable-div :hover {
 }
 
 .portfolio-item a {
+  pointer-events: none;
   color: rgb(194, 179, 179);
   margin-top: 16px;
   text-decoration: none;
