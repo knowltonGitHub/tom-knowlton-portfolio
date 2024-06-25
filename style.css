@@ -63,12 +63,31 @@
   margin-right: 35%;
 }
 
-portfolio-item.clickable-div {
+/* portfolio-item.clickable-div {
   background-color: #777777;
 }
 
 portfolio-item.clickable-div :hover {
   background-color: red;
+} */
+
+.portfolio-item.clickable-div {
+  position: relative; /* Required for pseudo-element positioning */
+}
+
+.portfolio-item.clickable-div:after {
+  content: ""; /* Empty content for the pseudo-element */
+  position: absolute; /* Position the pseudo-element on top */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; /* Fill the entire div */
+  background-color: inherit; /* Inherit background color from parent */
+  opacity: 0; /* Set initial opacity to 0 */
+}
+
+.portfolio-item.clickable-div:hover:after {
+  opacity: 0.7; /* Set opacity on hover */
 }
 
 .portfolio-item a {
