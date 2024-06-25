@@ -88,7 +88,6 @@ portfolio-item.clickable-div :hover {
 
 .portfolio-item.clickable-div:hover:after {
   opacity: 0.7; /* Set opacity on hover */
-  height: 30px;
 }
 
 .portfolio-item a {
