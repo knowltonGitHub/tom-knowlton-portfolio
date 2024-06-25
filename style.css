@@ -54,15 +54,14 @@
 }
 
 .udemy-first {
-  margin-left: -117px;
-  margin-top: -49px;
+  margin-right: 20%;
+  margin-left: 20%;
 }
 
 .udemy-second {
-  margin-right: -200px;
-  margin-top: -180px;
+  margin-right: 20%;
+  margin-left: 20%; 
 }
-
 .portfolio-item {
   display: flex;
   justify-content: center;
