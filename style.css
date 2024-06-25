@@ -28,9 +28,7 @@
 }
 
 .pluralsight {
-  right: 50px;
-  position: relative;
-  top: 50px;
+  margin-top: 43px; 
 }
 
 .psubheader {
@@ -79,7 +77,7 @@
 
 .portfolio-item a {
   color: rgb(194, 179, 179);
-  margin-top: 12px;
+  margin-top: 16px;
   text-decoration: none;
   font-size: 16px;
 }
@@ -91,9 +89,6 @@
 
 * {
   border-radius: 5px;
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
 }
 
 html {
