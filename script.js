@@ -15,16 +15,16 @@ $(".clickable-div").click(function() {
 
   $(".clickable-div").hover(function() {
     // Change background color on hover
-    $(this).css("background-color", "your-hover-color");
+    $(this).css("background-color", "#555555");
 
     // Increase font size of nested anchor on hover
-    $(this).find("a").css("font-size", "20px");
+    $(this).find("a").css("font-size", "18px");
   }, function() {
     // Change background color back to original on mouseout (optional)
-    $(this).css("background-color", "your-original-color");
+    $(this).css("background-color", "#777777");
 
     // Reset font size of nested anchor on mouseout (optional)
-    $(this).find("a").css("font-size", "15px"); // Or remove if you want font size to persist
+    $(this).find("a").css("font-size", "16px"); // Or remove if you want font size to persist
   });
 
 });
