@@ -63,6 +63,10 @@
   margin-right: 35%;
 }
 
+.portfolio-item :hover {
+  background-color: red;
+}
+
 .portfolio-item a {
   color: rgb(194, 179, 179);
   margin-top: 16px;
