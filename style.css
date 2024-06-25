@@ -4,15 +4,15 @@
 }
 
 .thebadges {
+  margin-left: 20%;
   margin-bottom: 40px;
   margin-top: 20px;
   display: flex;
   position: relative;
-  height: 200px; 
+  height: 200px;
   background-color: #0D0F12;
   justify-content: center;
-  margin-left: 400px;
-  margin-right: 380px;
+  margin-right: 20%;
 }
 
 .thebadges img {  
