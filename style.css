@@ -29,12 +29,8 @@
 .udemybadges {
   margin-top: 70px;
   display: flex;
-  position: relative;
-  height: 200px;
-  width: 506px;
-  justify-content: center;
-  margin-left: 620px;
-  margin-right: 200px;
+  position: relative; 
+  justify-content: center; 
 }
 
 .pluralsight {
