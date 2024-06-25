@@ -21,6 +21,28 @@
   margin-right: 200px;
 }
 
+.thebadges img {
+  /* Set desired width and height for the images */
+  width: 200px;
+  height: 150px;
+  /* Alternatively, use max-width and max-height */
+  /* max-width: 200px; */
+  /* max-height: 150px; */
+}
+
+
+/* .thebadges {
+  margin-top: 70px;
+  display: flex;
+  position: relative;
+  height: 200px;
+  width: 506px;
+  background-color: #0D0F12;
+  justify-content: center;
+  margin-left: 220px;
+  margin-right: 200px;
+} */
+
 .udemybadges {
   margin-top: 70px;
   display: flex;
