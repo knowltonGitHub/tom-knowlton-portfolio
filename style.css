@@ -20,6 +20,18 @@
   margin-right: 200px;
 }
 
+.udemybadges {
+  margin-top: 70px;
+  display: flex;
+  position: relative;
+  height: 200px;
+  width: 506px;
+  background-color: #0D0F12;
+  justify-content: center;
+  margin-left: 220px;
+  margin-right: 200px;
+}
+
 .pluralsight {
   right: 50px;
   position: relative;
