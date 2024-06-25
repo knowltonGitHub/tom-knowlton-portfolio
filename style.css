@@ -119,8 +119,7 @@ h1 {
   justify-content: center;
 }
 
-.udemy h2 { 
-  left: 200px;  
+.udemy h2 {   
   display: flex;
   color: #d19999;
   justify-content: center;
