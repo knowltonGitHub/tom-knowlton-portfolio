@@ -21,10 +21,10 @@
 }
 
 .udemybadges {
-  margin-top: 70px;
+  margin-top: 30px;
   display: flex;
-  position: relative; 
-  justify-content: center; 
+  position: relative;
+  justify-content: center;
 }
 
 .pluralsight {
