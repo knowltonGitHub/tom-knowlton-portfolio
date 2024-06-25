@@ -91,8 +91,8 @@ portfolio-item.clickable-div :hover {
 }
 
 .portfolio-item a {
-  pointer-events: none;
-  color: rgb(194, 179, 179);
+  z-index: 2; 
+  color: rgb(255 255 255);
   margin-top: 16px;
   text-decoration: none;
   font-size: 16px;
