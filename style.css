@@ -76,18 +76,18 @@ portfolio-item.clickable-div :hover {
 }
 
 .portfolio-item.clickable-div:after {
-  content: ""; /* Empty content for the pseudo-element */
-  position: absolute; /* Position the pseudo-element on top */
+  content: "";
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0; /* Fill the entire div */
-  background-color: inherit; /* Inherit background color from parent */
-  opacity: 0; /* Set initial opacity to 0 */
+  bottom: 0;
+  background-color: inherit;
+  opacity: 0.7;
 }
 
 .portfolio-item.clickable-div:hover:after {
-  opacity: 0; /* Set opacity on hover */
+  opacity: 0.7; /* Set opacity on hover */
 }
 
 .portfolio-item a {
