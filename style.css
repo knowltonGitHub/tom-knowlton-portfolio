@@ -48,9 +48,14 @@
  margin-top: 20px;
 }
 
-.udemy img {
-  margin-top: 20px;
- }
+.udemy-first img {
+  margin-top: -49px;
+}
+
+.udemy-second img {
+  margin-top: -49px;
+}
+
 
 .portfolio-item {
   display: flex;
