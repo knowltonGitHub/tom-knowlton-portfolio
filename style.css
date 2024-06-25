@@ -63,7 +63,7 @@
   margin-right: 35%;
 }
 
-div.portfolio-item :hover {
+div.portfolio-item.clickable-div :hover {
   background-color: red;
 }
 
