@@ -10,38 +10,21 @@
 }
 
 .thebadges {
-  margin-top: 70px;
+  margin-bottom: 40px;
+  margin-top: 20px;
   display: flex;
   position: relative;
-  height: 200px;
-  width: 506px;
+  height: 200px; 
   background-color: #0D0F12;
   justify-content: center;
-  margin-left: 220px;
-  margin-right: 200px;
+  margin-left: 400px;
+  margin-right: 380px;
 }
 
-.thebadges img {
-  /* Set desired width and height for the images */
+.thebadges img {  
   width: 200px;
-  height: 150px;
-  /* Alternatively, use max-width and max-height */
-  /* max-width: 200px; */
-  /* max-height: 150px; */
+  height: 150px; 
 }
-
-
-/* .thebadges {
-  margin-top: 70px;
-  display: flex;
-  position: relative;
-  height: 200px;
-  width: 506px;
-  background-color: #0D0F12;
-  justify-content: center;
-  margin-left: 220px;
-  margin-right: 200px;
-} */
 
 .udemybadges {
   margin-top: 70px;
