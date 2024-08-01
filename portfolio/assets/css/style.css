@@ -286,7 +286,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
     height: 468px;
 }
 .about-list-icon{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     position: absolute;
