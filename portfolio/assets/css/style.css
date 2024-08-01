@@ -201,14 +201,14 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
     background-position: center;
     height:521px;
 }
-.welcome-hero:before{
-    position:absolute;
+.welcome-hero:before {
+    position: absolute;
     content: " ";
-    top:0;
-    left:0;
-    background:rgba(168, 175, 209, 0.65);
-    width:100%;
-    height:100%;
+    top: 0;
+    left: 0;
+    background: rgb(111 119 156 / 64%);
+    width: 100%;
+    height: 100%;
 }
 
 /*.header-text-area*/
