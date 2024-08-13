@@ -9,7 +9,7 @@ font-family: 'Poppins', sans-serif;
 ==================================== */
 
 
-#aboutmehead div.section-heading.text-center h2 {
+ div #aboutmehead .section-heading.text-center h2 {
     position: relative;
     top: -50px;
     margin: 0px;
