@@ -17,6 +17,46 @@ font-family: 'Poppins', sans-serif;
     background-color: #ffe7cb;
 }
 
+#educationhead div.section-heading.text-center h2 {
+    position: relative;
+    top: -50px;
+    margin: 0px;
+    padding: 20px;
+    background-color: #ffe7cb;
+}
+
+#skillshead div.section-heading.text-center h2 {
+    position: relative;
+    top: -50px;
+    margin: 0px;
+    padding: 20px;
+    background-color: #ffe7cb;
+}
+
+#experiencehead div.section-heading.text-center h2 {
+    position: relative;
+    top: -50px;
+    margin: 0px;
+    padding: 20px;
+    background-color: #ffe7cb;
+}
+
+#clientshead div.section-heading.text-center h2 {
+    position: relative;
+    top: -50px;
+    margin: 0px;
+    padding: 20px;
+    background-color: #ffe7cb;
+}
+
+#contacthead div.section-heading.text-center h2 {
+    position: relative;
+    top: -50px;
+    margin: 0px;
+    padding: 20px;
+    background-color: #ffe7cb;
+}
+
 /*=========== TABLE OF CONTENTS ===========
 1.  General css (Reset code)
 2.  Header
