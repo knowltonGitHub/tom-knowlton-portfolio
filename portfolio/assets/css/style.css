@@ -253,6 +253,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #2c85f9;}
 .about {
     background-color: #fff1e1;
     padding: 50px 0 100px;
+    border: 1px solid black;
 }
 .about-content {padding-top: 100px;}
 /*.single-about-txt*/
@@ -453,7 +454,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 -------------------------------------*/
 .experience {
     padding: 50px 0 100px;
-    border-top: 1px solid #e5ebf2;
+    border-bottom: 1px solid #000000;
     background-color: #d2e5f7;
 }
 .experience-content {padding-top: 100px;}
@@ -687,6 +688,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .clients {
     background-color: #fff1e1;
     padding-top: 50px;
+    border-bottom: 1px solid #000000;
 }
 
 .clients-area {
@@ -709,6 +711,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .contact {
     background-color:#d2e5f7;
     padding: 50px 0 100px;
+    border-bottom: 1px solid #000000;
 }
 .single-contact-box {padding-top: 100px;}
 .contact-form  .form-group {
