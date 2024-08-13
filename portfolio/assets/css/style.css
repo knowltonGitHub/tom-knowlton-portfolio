@@ -9,12 +9,12 @@ font-family: 'Poppins', sans-serif;
 ==================================== */
 
 
-div.section-heading.text-center h2 {
+#aboutmehead div.section-heading.text-center h2 {
     position: relative;
     top: -50px;
     margin: 0px;
     padding: 20px;
-    background-color: red;
+    background-color: #ffe7cb;
 }
 
 /*=========== TABLE OF CONTENTS ===========
