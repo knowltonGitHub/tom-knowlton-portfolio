@@ -41,7 +41,7 @@ div#experiencehead.section-heading.text-center h2 {
     background-color:#88BBD9;
 }
 
-div#clientshead div.section-heading.text-center h2 {
+div#clientshead.section-heading.text-center h2 {
     position: relative;
     top: -50px;
     margin: 0px;
