@@ -6,3 +6,5 @@ const visitorCountElement = document.getElementById('visitor-count');
 visitorCountElement.textContent = visitorCount;   
 
 localStorage.setItem('visitorCount', visitorCount);
+
+//comment
