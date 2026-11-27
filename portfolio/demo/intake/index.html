@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sample Family Clinic intake (demo) · Tom Knowlton</title>
+  <meta name="description" content="Demo patient intake for a fictional Salt Lake City clinic. Nothing you enter is saved or sent.">
+  <meta name="theme-color" content="#ffe7cb">
+  <link rel="icon" href="../../assets/logo/favicon.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
+  <link rel="stylesheet" href="intake.css">
+</head>
+<body>
+  <!-- Demo only. This page has no backend and does not submit, store, or transmit answers. -->
+  <a class="skip" href="#main">Skip to the intake form</a>
+  <div class="top-stack">
+    <p class="demo-banner">Demo only: nothing you enter is saved or sent.</p>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="../../">Tom Knowlton</a>
+        <a class="header-link" href="../../">Portfolio</a>
+      </div>
+    </header>
+  </div>
+  <div class="stripe" aria-hidden="true"></div>
+
+  <main id="main">
+    <div class="wrap">
+      <article class="card">
+        <header class="clinic-head">
+          <div class="clinic-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="48" height="48">
+              <rect width="48" height="48" rx="12" fill="#1f2c6c"/>
+              <path d="M22 12h4v10h10v4H26v10h-4V26H12v-4h10V12z" fill="#ffffff"/>
+            </svg>
+          </div>
+          <p class="eyebrow">Fictional office · Salt Lake City, Utah</p>
+          <h1>Sample Family Clinic</h1>
+          <p class="lede" id="lede">New patient intake</p>
+        </header>
+
+        <p class="intro" id="intro-copy">Request a visit in a few short steps. The questions change with the provider you choose, and you can review everything before you finish.</p>
+
+        <noscript>
+          <p class="noscript">This demo needs JavaScript to move between steps. Even then, it does not save or send anything you type.</p>
+        </noscript>
+
+        <div id="wizard">
+          <nav class="progress" id="progress" aria-label="Form progress">
+            <ol>
+              <li class="is-current">
+                <button type="button" data-step="0" aria-current="step"><span class="step-index">1</span><span class="step-name">Visit</span></button>
+              </li>
+              <li>
+                <button type="button" data-step="1" disabled><span class="step-index">2</span><span class="step-name">About you</span></button>
+              </li>
+              <li>
+                <button type="button" data-step="2" disabled><span class="step-index">3</span><span class="step-name">Insurance</span></button>
+              </li>
+              <li>
+                <button type="button" data-step="3" disabled><span class="step-index">4</span><span class="step-name">Provider</span></button>
+              </li>
+              <li>
+                <button type="button" data-step="4" disabled><span class="step-index">5</span><span class="step-name">Signature</span></button>
+              </li>
+              <li>
+                <button type="button" data-step="5" disabled><span class="step-index">6</span><span class="step-name">Review</span></button>
+              </li>
+            </ol>
+          </nav>
+          <p class="step-status" id="step-status">Step 1 of 6: Visit</p>
+
+          <div id="error-summary" class="error-summary" tabindex="-1" hidden>
+            <p>Please fix the following:</p>
+            <ul></ul>
+          </div>
+
+          <section class="step" id="step-visit" aria-labelledby="visit-title">
+            <h2 id="visit-title" tabindex="-1">Your visit</h2>
+            <p class="step-lead">Tell us who you are seeing. Later questions depend on this choice.</p>
+
+            <fieldset id="patient-type">
+              <legend>Are you a new or returning patient? <abbr class="req" title="required">*</abbr></legend>
+              <div class="choice-grid cols-2">
+                <label class="choice">
+                  <input type="radio" name="patient-type" id="patient-new" value="new" data-summary="New patient">
+                  <span class="choice-title">New patient</span>
+                  <span class="choice-meta">First visit with this clinic</span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="patient-type" id="patient-returning" value="returning" data-summary="Returning patient">
+                  <span class="choice-title">Returning patient</span>
+                  <span class="choice-meta">We have seen you before</span>
+                </label>
+              </div>
+              <p class="field-error" id="patient-type-error" hidden></p>
+            </fieldset>
+
+            <fieldset id="provider">
+              <legend>Which provider are you seeing? <abbr class="req" title="required">*</abbr></legend>
+              <div class="choice-grid cols-2">
+                <label class="choice">
+                  <input type="radio" name="provider" id="provider-marsh" value="marsh" data-summary="Dr. Elena Marsh">
+                  <span class="choice-title">Dr. Elena Marsh</span>
+                  <span class="choice-meta">Family medicine</span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="provider" id="provider-hale" value="hale" data-summary="Dr. Aaron Hale">
+                  <span class="choice-title">Dr. Aaron Hale</span>
+                  <span class="choice-meta">Chiropractic</span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="provider" id="provider-chen" value="chen" data-summary="Maya Chen, NP">
+                  <span class="choice-title">Maya Chen, NP</span>
+                  <span class="choice-meta">Home health</span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="provider" id="provider-any" value="any" data-summary="the first available provider">
+                  <span class="choice-title">First available</span>
+                  <span class="choice-meta">No preference</span>
+                </label>
+              </div>
+              <p class="field-error" id="provider-error" hidden></p>
+            </fieldset>
+
+            <div class="grid two">
+              <div class="field">
+                <label for="visit-date">Preferred date <abbr class="req" title="required">*</abbr></label>
+                <input type="date" id="visit-date" autocomplete="off" aria-describedby="visit-date-error">
+                <p class="field-error" id="visit-date-error" hidden></p>
+              </div>
+            </div>
+
+            <fieldset id="visit-time">
+              <legend>Time of day <abbr class="req" title="required">*</abbr></legend>
+              <div class="choice-grid cols-3">
+                  <label class="choice">
+                    <input type="radio" name="visit-time" id="time-morning" value="morning" data-summary="morning">
+                    <span class="choice-title">Morning</span>
+                    <span class="choice-meta">8:00 to noon</span>
+                  </label>
+                  <label class="choice">
+                    <input type="radio" name="visit-time" id="time-afternoon" value="afternoon" data-summary="afternoon">
+                    <span class="choice-title">Afternoon</span>
+                    <span class="choice-meta">Noon to 4:00</span>
+                  </label>
+                  <label class="choice">
+                    <input type="radio" name="visit-time" id="time-evening" value="evening" data-summary="evening">
+                    <span class="choice-title">Evening</span>
+                    <span class="choice-meta">4:00 to 6:00</span>
+                  </label>
+                </div>
+              <p class="field-error" id="visit-time-error" hidden></p>
+            </fieldset>
+
+            <div class="field">
+              <label for="visit-reason">Reason for the visit <abbr class="req" title="required">*</abbr></label>
+              <textarea id="visit-reason" maxlength="600" aria-describedby="visit-reason-hint visit-reason-error"></textarea>
+              <p class="hint" id="visit-reason-hint">A sentence or two is enough.</p>
+              <p class="field-error" id="visit-reason-error" hidden></p>
+            </div>
+          </section>
+
+          <section class="step" id="step-patient" aria-labelledby="patient-title" hidden>
+            <h2 id="patient-title" tabindex="-1">About you</h2>
+            <p class="step-lead">Used to open the chart and reach you about this visit.</p>
+
+            <div class="grid two">
+              <div class="field">
+                <label for="first-name">First name <abbr class="req" title="required">*</abbr></label>
+                <input type="text" id="first-name" autocomplete="given-name" maxlength="60" aria-describedby="first-name-error">
+                <p class="field-error" id="first-name-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="last-name">Last name <abbr class="req" title="required">*</abbr></label>
+                <input type="text" id="last-name" autocomplete="family-name" maxlength="60" aria-describedby="last-name-error">
+                <p class="field-error" id="last-name-error" hidden></p>
+              </div>
+            </div>
+
+            <div class="grid two">
+              <div class="field">
+                <label for="dob">Date of birth <abbr class="req" title="required">*</abbr></label>
+                <input type="date" id="dob" autocomplete="bday" aria-describedby="dob-error">
+                <p class="field-error" id="dob-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="phone">Mobile phone <abbr class="req" title="required">*</abbr></label>
+                <input type="tel" id="phone" autocomplete="tel" inputmode="tel" placeholder="(801) 555-0142" aria-describedby="phone-error">
+                <p class="field-error" id="phone-error" hidden></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email <abbr class="req" title="required">*</abbr></label>
+              <input type="email" id="email" autocomplete="email" inputmode="email" maxlength="80" placeholder="name@example.com" aria-describedby="email-error">
+              <p class="field-error" id="email-error" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="address">Street address <abbr class="req" title="required">*</abbr></label>
+              <input type="text" id="address" autocomplete="street-address" maxlength="120" aria-describedby="address-error">
+              <p class="field-error" id="address-error" hidden></p>
+            </div>
+
+            <div class="grid city">
+              <div class="field">
+                <label for="city">City <abbr class="req" title="required">*</abbr></label>
+                <input type="text" id="city" autocomplete="address-level2" maxlength="60" aria-describedby="city-error">
+                <p class="field-error" id="city-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="state">State <abbr class="req" title="required">*</abbr></label>
+                <select id="state" autocomplete="address-level1" aria-describedby="state-error">
+                  <option value="AL">Alabama</option>
+                  <option value="AK">Alaska</option>
+                  <option value="AZ">Arizona</option>
+                  <option value="AR">Arkansas</option>
+                  <option value="CA">California</option>
+                  <option value="CO">Colorado</option>
+                  <option value="CT">Connecticut</option>
+                  <option value="DE">Delaware</option>
+                  <option value="DC">District of Columbia</option>
+                  <option value="FL">Florida</option>
+                  <option value="GA">Georgia</option>
+                  <option value="HI">Hawaii</option>
+                  <option value="ID">Idaho</option>
+                  <option value="IL">Illinois</option>
+                  <option value="IN">Indiana</option>
+                  <option value="IA">Iowa</option>
+                  <option value="KS">Kansas</option>
+                  <option value="KY">Kentucky</option>
+                  <option value="LA">Louisiana</option>
+                  <option value="ME">Maine</option>
+                  <option value="MD">Maryland</option>
+                  <option value="MA">Massachusetts</option>
+                  <option value="MI">Michigan</option>
+                  <option value="MN">Minnesota</option>
+                  <option value="MS">Mississippi</option>
+                  <option value="MO">Missouri</option>
+                  <option value="MT">Montana</option>
+                  <option value="NE">Nebraska</option>
+                  <option value="NV">Nevada</option>
+                  <option value="NH">New Hampshire</option>
+                  <option value="NJ">New Jersey</option>
+                  <option value="NM">New Mexico</option>
+                  <option value="NY">New York</option>
+                  <option value="NC">North Carolina</option>
+                  <option value="ND">North Dakota</option>
+                  <option value="OH">Ohio</option>
+                  <option value="OK">Oklahoma</option>
+                  <option value="OR">Oregon</option>
+                  <option value="PA">Pennsylvania</option>
+                  <option value="RI">Rhode Island</option>
+                  <option value="SC">South Carolina</option>
+                  <option value="SD">South Dakota</option>
+                  <option value="TN">Tennessee</option>
+                  <option value="TX">Texas</option>
+                  <option value="UT" selected>Utah</option>
+                  <option value="VT">Vermont</option>
+                  <option value="VA">Virginia</option>
+                  <option value="WA">Washington</option>
+                  <option value="WV">West Virginia</option>
+                  <option value="WI">Wisconsin</option>
+                  <option value="WY">Wyoming</option>
+                </select>
+                <p class="field-error" id="state-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="zip">ZIP code <abbr class="req" title="required">*</abbr></label>
+                <input type="text" id="zip" autocomplete="postal-code" inputmode="numeric" maxlength="10" placeholder="84101" aria-describedby="zip-error">
+                <p class="field-error" id="zip-error" hidden></p>
+              </div>
+            </div>
+
+            <div class="grid two">
+              <div class="field">
+                <label for="emergency-name">Emergency contact <abbr class="req" title="required">*</abbr></label>
+                <input type="text" id="emergency-name" autocomplete="name" maxlength="60" aria-describedby="emergency-name-error">
+                <p class="field-error" id="emergency-name-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="emergency-phone">Emergency phone <abbr class="req" title="required">*</abbr></label>
+                <input type="tel" id="emergency-phone" autocomplete="tel" inputmode="tel" placeholder="(801) 555-0199" aria-describedby="emergency-phone-error">
+                <p class="field-error" id="emergency-phone-error" hidden></p>
+              </div>
+            </div>
+
+            <div id="guardian-fields" hidden>
+              <p class="note">A parent or guardian should complete this form for a patient under 18.</p>
+              <div class="grid two">
+                <div class="field">
+                  <label for="guardian-name">Parent or guardian name <abbr class="req" title="required">*</abbr></label>
+                  <input type="text" id="guardian-name" autocomplete="name" maxlength="60" aria-describedby="guardian-name-error">
+                  <p class="field-error" id="guardian-name-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="guardian-relation">Relationship <abbr class="req" title="required">*</abbr></label>
+                  <select id="guardian-relation" aria-describedby="guardian-relation-error">
+                    <option value="">Choose one</option>
+                    <option value="Parent">Parent</option>
+                    <option value="Legal guardian">Legal guardian</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <p class="field-error" id="guardian-relation-error" hidden></p>
+                </div>
+              </div>
+              <div class="field">
+                <label for="guardian-phone">Guardian phone <abbr class="req" title="required">*</abbr></label>
+                <input type="tel" id="guardian-phone" autocomplete="tel" inputmode="tel" aria-describedby="guardian-phone-error">
+                <p class="field-error" id="guardian-phone-error" hidden></p>
+              </div>
+            </div>
+          </section>
+
+          <section class="step" id="step-insurance" aria-labelledby="insurance-title" hidden>
+            <h2 id="insurance-title" tabindex="-1">Insurance and ID</h2>
+            <p class="step-lead">Self-pay skips the plan questions. A card photo is previewed here and is not uploaded.</p>
+
+            <fieldset id="coverage">
+              <legend>How will this visit be covered? <abbr class="req" title="required">*</abbr></legend>
+              <div class="choice-grid cols-2">
+                <label class="choice">
+                  <input type="radio" name="coverage" id="coverage-insured" value="insured" data-summary="Insured">
+                  <span class="choice-title">Insurance</span>
+                  <span class="choice-meta">We bill a health plan</span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="coverage" id="coverage-self" value="self" data-summary="Self-pay">
+                  <span class="choice-title">Self-pay</span>
+                  <span class="choice-meta">No plan questions</span>
+                </label>
+              </div>
+              <p class="field-error" id="coverage-error" hidden></p>
+            </fieldset>
+
+            <div id="insured-fields" hidden>
+              <div class="grid two">
+                <div class="field">
+                  <label for="carrier">Insurance plan <abbr class="req" title="required">*</abbr></label>
+                  <select id="carrier" aria-describedby="carrier-error">
+                    <option value="">Choose a plan</option>
+                    <option>Select Health</option>
+                    <option>Regence BlueCross BlueShield</option>
+                    <option>PEHP</option>
+                    <option>Medicare</option>
+                    <option>Medicaid</option>
+                    <option>Aetna</option>
+                    <option>Cigna</option>
+                    <option>UnitedHealthcare</option>
+                    <option>Other</option>
+                  </select>
+                  <p class="field-error" id="carrier-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="member-id">Member ID <abbr class="req" title="required">*</abbr></label>
+                  <input type="text" id="member-id" maxlength="40" autocomplete="off" aria-describedby="member-id-error">
+                  <p class="field-error" id="member-id-error" hidden></p>
+                </div>
+              </div>
+              <div class="grid two">
+                <div class="field">
+                  <label for="group-number">Group number <span class="optional">(optional)</span></label>
+                  <input type="text" id="group-number" maxlength="40" autocomplete="off">
+                </div>
+                <div class="field">
+                  <label for="holder-relation">Relationship to policy holder <abbr class="req" title="required">*</abbr></label>
+                  <select id="holder-relation" aria-describedby="holder-relation-error">
+                    <option value="">Choose one</option>
+                    <option>Self</option>
+                    <option>Spouse</option>
+                    <option>Child</option>
+                    <option>Other</option>
+                  </select>
+                  <p class="field-error" id="holder-relation-error" hidden></p>
+                </div>
+              </div>
+              <div class="field">
+                <label for="holder-name">Policy holder name <abbr class="req" title="required">*</abbr></label>
+                <input type="text" id="holder-name" maxlength="60" autocomplete="name" aria-describedby="holder-name-error">
+                <p class="field-error" id="holder-name-error" hidden></p>
+              </div>
+            </div>
+
+            <div class="upload">
+              <label for="insurance-card">Insurance card, front <span class="optional">(optional)</span></label>
+              <p class="hint" id="card-hint">JPG, PNG, WEBP, or GIF, up to 5 MB. The preview stays in this browser. Use a sample card if you would rather not attach a real one.</p>
+              <input id="insurance-card" type="file" accept="image/jpeg,image/png,image/webp,image/gif,.jpg,.jpeg,.png,.webp,.gif" aria-describedby="card-hint insurance-card-error">
+              <button type="button" class="btn btn-secondary btn-small" id="sample-card">Use a sample card</button>
+              <p class="field-error" id="insurance-card-error" hidden></p>
+              <div class="preview" id="card-preview" hidden>
+                <img id="card-preview-img" alt="Preview of the insurance card selected on this device">
+                <p class="file-meta" id="card-preview-meta"></p>
+                <button type="button" class="text-btn" data-clear="card">Remove file</button>
+              </div>
+            </div>
+
+            <div class="upload">
+              <label for="photo-id">Photo ID <span class="optional">(optional)</span></label>
+              <p class="hint" id="photo-hint">Same file types. A real office can require this. The sample ID is not a government document.</p>
+              <input id="photo-id" type="file" accept="image/jpeg,image/png,image/webp,image/gif,.jpg,.jpeg,.png,.webp,.gif" aria-describedby="photo-hint photo-id-error">
+              <button type="button" class="btn btn-secondary btn-small" id="sample-photo">Use a sample ID</button>
+              <p class="field-error" id="photo-id-error" hidden></p>
+              <div class="preview" id="photo-preview" hidden>
+                <img id="photo-preview-img" alt="Preview of the photo ID selected on this device">
+                <p class="file-meta" id="photo-preview-meta"></p>
+                <button type="button" class="text-btn" data-clear="photo">Remove file</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="step" id="step-clinical" aria-labelledby="clinical-title" hidden>
+            <h2 id="clinical-title" tabindex="-1">Questions for your provider</h2>
+            <p class="note">This step changes with the provider you chose. <button type="button" class="text-btn" id="change-provider">Choose a different provider</button></p>
+            <p class="field-error" id="clinical-title-error" hidden></p>
+
+            <div id="panel-marsh" hidden>
+              <div class="field">
+                <label for="meds">Current medications <abbr class="req" title="required">*</abbr></label>
+                <textarea id="meds" maxlength="1000" aria-describedby="meds-hint meds-error"></textarea>
+                <p class="hint" id="meds-hint">Type None if you do not take any.</p>
+                <p class="field-error" id="meds-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="allergies">Allergies <abbr class="req" title="required">*</abbr></label>
+                <textarea id="allergies" maxlength="1000" aria-describedby="allergies-hint allergies-error"></textarea>
+                <p class="hint" id="allergies-hint">Medications, latex, or other. Type None if you have none.</p>
+                <p class="field-error" id="allergies-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="pharmacy">Preferred pharmacy <abbr class="req" title="required">*</abbr></label>
+                <input type="text" id="pharmacy" maxlength="80" aria-describedby="pharmacy-error">
+                <p class="field-error" id="pharmacy-error" hidden></p>
+              </div>
+              <fieldset id="refill">
+                <legend>Do you need a medication refill at this visit? <abbr class="req" title="required">*</abbr></legend>
+                <div class="choice-grid cols-2">
+                  <label class="choice">
+                    <input type="radio" name="refill" id="refill-yes" value="yes" data-summary="Yes">
+                    <span class="choice-title">Yes</span>
+                  </label>
+                  <label class="choice">
+                    <input type="radio" name="refill" id="refill-no" value="no" data-summary="No">
+                    <span class="choice-title">No</span>
+                  </label>
+                </div>
+                <p class="field-error" id="refill-error" hidden></p>
+              </fieldset>
+            </div>
+
+            <div id="panel-hale" hidden>
+              <div class="field">
+                <label for="pain-area">Where is the pain? <abbr class="req" title="required">*</abbr></label>
+                <select id="pain-area" aria-describedby="pain-area-error">
+                  <option value="">Choose one</option>
+                  <option>Neck</option>
+                  <option>Mid back</option>
+                  <option>Low back</option>
+                  <option>Shoulder</option>
+                  <option>Hip</option>
+                  <option>Other</option>
+                </select>
+                <p class="field-error" id="pain-area-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="pain-level">How strong is the pain today?</label>
+                <div class="range-row">
+                  <span id="pain-min">0</span>
+                  <input type="range" id="pain-level" min="0" max="10" step="1" value="5" aria-describedby="pain-hint">
+                  <span id="pain-max">10</span>
+                </div>
+                <p class="pain-readout">Current answer: <strong id="pain-value">5</strong> out of 10</p>
+                <p class="hint" id="pain-hint">0 is no pain. 10 is the worst pain.</p>
+              </div>
+              <fieldset id="accident">
+                <legend>Did this start after an accident or injury? <abbr class="req" title="required">*</abbr></legend>
+                <div class="choice-grid cols-2">
+                  <label class="choice">
+                    <input type="radio" name="accident" id="accident-yes" value="yes" data-summary="Yes">
+                    <span class="choice-title">Yes</span>
+                  </label>
+                  <label class="choice">
+                    <input type="radio" name="accident" id="accident-no" value="no" data-summary="No">
+                    <span class="choice-title">No</span>
+                  </label>
+                </div>
+                <p class="field-error" id="accident-error" hidden></p>
+              </fieldset>
+              <div id="accident-fields" hidden>
+                <div class="grid two">
+                  <div class="field">
+                    <label for="accident-type">Kind of accident <abbr class="req" title="required">*</abbr></label>
+                    <select id="accident-type" aria-describedby="accident-type-error">
+                      <option value="">Choose one</option>
+                      <option>Auto</option>
+                      <option>Work</option>
+                      <option>Fall</option>
+                      <option>Other</option>
+                    </select>
+                    <p class="field-error" id="accident-type-error" hidden></p>
+                  </div>
+                  <div class="field">
+                    <label for="accident-date">Approximate date <abbr class="req" title="required">*</abbr></label>
+                    <input type="date" id="accident-date" aria-describedby="accident-date-error">
+                    <p class="field-error" id="accident-date-error" hidden></p>
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label for="imaging">Imaging of this area <abbr class="req" title="required">*</abbr></label>
+                <select id="imaging" aria-describedby="imaging-error">
+                  <option value="">Choose one</option>
+                  <option>None</option>
+                  <option>X-ray</option>
+                  <option>MRI</option>
+                  <option>Not sure</option>
+                </select>
+                <p class="field-error" id="imaging-error" hidden></p>
+              </div>
+            </div>
+
+            <div id="panel-chen" hidden>
+              <fieldset id="visit-for">
+                <legend>Who is the home visit for? <abbr class="req" title="required">*</abbr></legend>
+                <div class="choice-grid cols-2">
+                  <label class="choice">
+                    <input type="radio" name="visit-for" id="visit-self" value="self" data-summary="The patient">
+                    <span class="choice-title">Me</span>
+                  </label>
+                  <label class="choice">
+                    <input type="radio" name="visit-for" id="visit-other" value="other" data-summary="Someone I care for">
+                    <span class="choice-title">Someone I care for</span>
+                  </label>
+                </div>
+                <p class="field-error" id="visit-for-error" hidden></p>
+              </fieldset>
+              <div class="field">
+                <label for="mobility">Getting around at home <abbr class="req" title="required">*</abbr></label>
+                <select id="mobility" aria-describedby="mobility-error">
+                  <option value="">Choose one</option>
+                  <option>Independent</option>
+                  <option>Cane or walker</option>
+                  <option>Wheelchair</option>
+                  <option>Mostly in bed</option>
+                </select>
+                <p class="field-error" id="mobility-error" hidden></p>
+              </div>
+              <fieldset id="concerns">
+                <legend>Home concerns <abbr class="req" title="required">*</abbr></legend>
+                <div class="choice-grid cols-2">
+                  <label class="check"><input type="checkbox" name="concerns" id="concern-stairs" value="stairs"><span>Stairs</span></label>
+                  <label class="check"><input type="checkbox" name="concerns" id="concern-rugs" value="rugs"><span>Throw rugs</span></label>
+                  <label class="check"><input type="checkbox" name="concerns" id="concern-bath" value="bath"><span>Bathtub or shower</span></label>
+                  <label class="check"><input type="checkbox" name="concerns" id="concern-none" value="none"><span>None of these</span></label>
+                </div>
+                <p class="field-error" id="concerns-error" hidden></p>
+              </fieldset>
+              <fieldset id="home-time">
+                <legend>Best time for a home visit <abbr class="req" title="required">*</abbr></legend>
+                <div class="choice-grid cols-3">
+                  <label class="choice">
+                    <input type="radio" name="home-time" id="home-morning" value="morning" data-summary="Morning">
+                    <span class="choice-title">Morning</span>
+                  </label>
+                  <label class="choice">
+                    <input type="radio" name="home-time" id="home-afternoon" value="afternoon" data-summary="Afternoon">
+                    <span class="choice-title">Afternoon</span>
+                  </label>
+                  <label class="choice">
+                    <input type="radio" name="home-time" id="home-evening" value="evening" data-summary="Evening">
+                    <span class="choice-title">Evening</span>
+                  </label>
+                </div>
+                <p class="field-error" id="home-time-error" hidden></p>
+              </fieldset>
+              <div id="care-fields" hidden>
+                <p class="note">Who should the nurse coordinate with?</p>
+                <div class="grid two">
+                  <div class="field">
+                    <label for="care-name">Caregiver name <abbr class="req" title="required">*</abbr></label>
+                    <input type="text" id="care-name" maxlength="60" autocomplete="name" aria-describedby="care-name-error">
+                    <p class="field-error" id="care-name-error" hidden></p>
+                  </div>
+                  <div class="field">
+                    <label for="care-relation">Relationship <abbr class="req" title="required">*</abbr></label>
+                    <input type="text" id="care-relation" maxlength="40" placeholder="Daughter, spouse, neighbor" aria-describedby="care-relation-error">
+                    <p class="field-error" id="care-relation-error" hidden></p>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="care-phone">Phone that reaches the caregiver <abbr class="req" title="required">*</abbr></label>
+                  <input type="tel" id="care-phone" inputmode="tel" autocomplete="tel" aria-describedby="care-phone-error">
+                  <p class="field-error" id="care-phone-error" hidden></p>
+                </div>
+              </div>
+            </div>
+
+            <div id="panel-any" hidden>
+              <div class="field">
+                <label for="help-with">What do you want help with? <abbr class="req" title="required">*</abbr></label>
+                <textarea id="help-with" maxlength="1000" aria-describedby="help-with-hint help-with-error"></textarea>
+                <p class="hint" id="help-with-hint">The scheduling team would use this to match a provider. In this demo, nobody is assigned.</p>
+                <p class="field-error" id="help-with-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="avoid-provider">A clinician you would rather not see <span class="optional">(optional)</span></label>
+                <input type="text" id="avoid-provider" maxlength="80">
+              </div>
+            </div>
+          </section>
+
+          <section class="step" id="step-consent" aria-labelledby="consent-title" hidden>
+            <h2 id="consent-title" tabindex="-1">Policies and signature</h2>
+            <p class="step-lead">Read both short policies, then sign with your name. This is sample text for a fictional office.</p>
+
+            <h3 class="policy-title">Notice of Privacy Practices</h3>
+            <div class="policy" tabindex="0" aria-label="Notice of Privacy Practices">
+              <p>Sample Family Clinic uses the information in this form to schedule your visit, prepare the provider you selected, and bill for care. We do not sell patient information. Staff who need it to do their jobs may see it. In a real deployment, this acknowledgment is stored with your intake and can be produced for the clinic's privacy officer. This is sample text, not a real notice of privacy practices.</p>
+            </div>
+            <label class="check">
+              <input type="checkbox" id="privacy-ok" aria-describedby="privacy-ok-error">
+              <span>I have read the Notice of Privacy Practices and I agree to it. <abbr class="req" title="required">*</abbr></span>
+            </label>
+            <p class="field-error" id="privacy-ok-error" hidden></p>
+
+            <h3 class="policy-title">Financial policy</h3>
+            <div class="policy" tabindex="0" aria-label="Financial policy">
+              <p>Payment for a copay or a self-pay visit is due at the time of service. The clinic can bill an insurance plan as a courtesy. You are responsible for amounts the plan does not cover. Please give at least 24 hours' notice to cancel or reschedule. A missed visit without notice may be charged a $50 fee. This is a sample policy for a fictional office.</p>
+            </div>
+            <label class="check">
+              <input type="checkbox" id="financial-ok" aria-describedby="financial-ok-error">
+              <span>I have read the financial policy and I agree to it. <abbr class="req" title="required">*</abbr></span>
+            </label>
+            <p class="field-error" id="financial-ok-error" hidden></p>
+
+            <div class="sign-box">
+              <div class="field">
+                <label for="signature">Type your full name <abbr class="req" title="required">*</abbr></label>
+                <input type="text" id="signature" class="signature-input" maxlength="80" autocomplete="name" aria-describedby="signature-hint signature-error">
+                <p class="hint" id="signature-hint">Type your first and last name, the same way you entered them.</p>
+                <p class="field-error" id="signature-error" hidden></p>
+              </div>
+              <p class="sign-date">Dated <strong id="sign-date"></strong></p>
+              <label class="check">
+                <input type="checkbox" id="signature-intent" aria-describedby="signature-intent-error">
+                <span>I intend this typed name to be my electronic signature. <abbr class="req" title="required">*</abbr></span>
+              </label>
+              <p class="field-error" id="signature-intent-error" hidden></p>
+              <p class="hint">A real deployment would store that name with the date and time. Nothing you type here is stored.</p>
+            </div>
+          </section>
+
+          <section class="step" id="step-review" aria-labelledby="review-title" hidden>
+            <h2 id="review-title" tabindex="-1">Review and finish</h2>
+            <p class="step-lead">Check each section. Finishing does not send this form.</p>
+            <div id="review-body"></div>
+          </section>
+
+          <div class="actions">
+            <button type="button" class="btn btn-secondary" id="back" hidden>Back</button>
+            <button type="button" class="btn btn-primary" id="next">Continue</button>
+          </div>
+          <p class="reassure" id="reassure">Your answers stay in this browser tab.</p>
+        </div>
+
+        <div id="confirmation" hidden>
+          <div class="done-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="32" height="32">
+              <path d="M5 12.5 9.2 17 19 7" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h2 id="done-title" tabindex="-1">Intake finished</h2>
+          <p>This is the screen a patient would see after sending the form. This demo stops here: nothing was saved, and no one was notified.</p>
+          <p id="done-recap"></p>
+          <h3>What would happen next in a real office</h3>
+          <ol class="next-list">
+            <li>Store the answers securely. They would be encrypted, with access limited to staff who need them for the visit.</li>
+            <li>Notify the office that a new intake is ready to review.</li>
+            <li id="route-line"></li>
+            <li>Push the details into the system the office already uses, such as its practice-management or health-record software, so the chart is filled in without retyping.</li>
+          </ol>
+          <p>Sample reference <span class="ref" id="demo-ref"></span></p>
+          <p class="hint">That number was created in this browser for the walkthrough. It is not a real confirmation, and it disappears when you refresh the page.</p>
+          <div class="actions">
+            <button type="button" class="btn btn-secondary" id="restart">Start over</button>
+            <a class="btn btn-primary" href="../../">Back to portfolio</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Sample Family Clinic is fictional. This demo was built by Tom Knowlton, a freelance software developer in Utah.</p>
+      <p><a href="../../">Portfolio</a> · <a href="tel:8016040780">801.604.0780</a> · <a href="mailto:softwaredevr@gmail.com">softwaredevr@gmail.com</a></p>
+    </div>
+  </footer>
+  <script src="intake.js"></script>
+</body>
+</html>
